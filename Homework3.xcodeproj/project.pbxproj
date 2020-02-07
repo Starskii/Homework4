@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3303EC1823ECC21800DD20D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303EC1723ECC21800DD20D6 /* SettingsViewController.swift */; };
+		3303EC1A23ECC96C00DD20D6 /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3303EC1923ECC96C00DD20D6 /* DecimalMinusTextField.swift */; };
 		33296BF423E3848800E02231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33296BF323E3848800E02231 /* AppDelegate.swift */; };
 		33296BF623E3848800E02231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33296BF523E3848800E02231 /* ViewController.swift */; };
 		33296BF923E3848800E02231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33296BF723E3848800E02231 /* Main.storyboard */; };
@@ -33,7 +35,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3303EC1623ECAB0000DD20D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3303EC1723ECC21800DD20D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3303EC1923ECC96C00DD20D6 /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		33296BF023E3848800E02231 /* Homework3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33296BF323E3848800E02231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33296BF523E3848800E02231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				33296BF323E3848800E02231 /* AppDelegate.swift */,
+				3303EC1923ECC96C00DD20D6 /* DecimalMinusTextField.swift */,
 				33296BF523E3848800E02231 /* ViewController.swift */,
 				33296BF723E3848800E02231 /* Main.storyboard */,
+				3303EC1723ECC21800DD20D6 /* SettingsViewController.swift */,
 				33296BFA23E3848900E02231 /* Assets.xcassets */,
 				33296BFC23E3848900E02231 /* LaunchScreen.storyboard */,
 				33296BFF23E3848900E02231 /* Info.plist */,
@@ -135,6 +154,7 @@
 				33296BEC23E3848800E02231 /* Sources */,
 				33296BED23E3848800E02231 /* Frameworks */,
 				33296BEE23E3848800E02231 /* Resources */,
+				3303EC1623ECAB0000DD20D6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -258,6 +278,8 @@
 			files = (
 				33296BF623E3848800E02231 /* ViewController.swift in Sources */,
 				33296BF423E3848800E02231 /* AppDelegate.swift in Sources */,
+				3303EC1A23ECC96C00DD20D6 /* DecimalMinusTextField.swift in Sources */,
+				3303EC1823ECC21800DD20D6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
