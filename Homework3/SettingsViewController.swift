@@ -20,11 +20,15 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var fromUnitVal = "404"
     var toUnitVal = "404"
   
+
     
     var pickerData : [String] = [String]()
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var tLbl: UILabel!
     @IBOutlet weak var fLbl: UILabel!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var settingsView: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,12 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }else{
             pickerData = ["Meters","Yards","Miles"]
         }
+        self.navigationController?.navigationBar.barTintColor = BACKGROUND_COLOR
+        
+        cancelButton.tintColor = FOREGROUND_COLOR
+        saveButton.tintColor = FOREGROUND_COLOR
+        
+        
         // Do any additional setup after loading the view.
     }
     

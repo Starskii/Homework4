@@ -17,5 +17,15 @@ class ConversionCalcButton: UIButton {
         // Drawing code
     }
     */
+    
+    override func awakeFromNib() {
+        self.backgroundColor = FOREGROUND_COLOR
+        self.setTitleColor(BACKGROUND_COLOR, for: .normal)
+        
+        self.layer.cornerRadius = 5
+        self.layer.borderWidth = 8
+        self.layer.borderColor = FOREGROUND_COLOR.cgColor
+        
+    }
 
 }

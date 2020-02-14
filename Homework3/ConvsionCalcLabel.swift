@@ -17,5 +17,9 @@ class ConvsionCalcLabel: UILabel {
         // Drawing code
     }
     */
+    
+    override func awakeFromNib() {
+        self.textColor = FOREGROUND_COLOR
+    }
 
 }

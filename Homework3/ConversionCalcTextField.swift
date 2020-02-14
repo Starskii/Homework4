@@ -17,5 +17,17 @@ class ConversionCalcTextField: DecimalMinusTextField {
         // Drawing code
     }
     */
-
+    override func awakeFromNib() {
+        self.layer.borderWidth = 1
+        self.textColor = FOREGROUND_COLOR
+        self.backgroundColor = UIColor.clear
+        self.tintColor = FOREGROUND_COLOR
+        self.borderStyle = .roundedRect
+        self.layer.cornerRadius = 10
+        self.layer.borderColor = FOREGROUND_COLOR.cgColor
+        guard let ph = self.placeholder else {
+            return
+        }
+        self.attributedPlaceholder = NSAttributedString(string: ph, attributes: [NSAttributedString.Key.foregroundColor : FOREGROUND_COLOR])
+    }
 }

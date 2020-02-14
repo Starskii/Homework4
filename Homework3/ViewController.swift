@@ -15,17 +15,19 @@ class ViewController: UIViewController, UnitSelection{
         self.toUnit.text = toUnit!
     }
     
-    @IBOutlet weak var toTextField: UITextField!
-    @IBOutlet weak var fromTextField: UITextField!
+    @IBOutlet weak var toTextField: ConversionCalcTextField!
+    @IBOutlet weak var fromTextField: ConversionCalcTextField!
     @IBOutlet weak var fromUnit: UILabel!
     @IBOutlet weak var toUnit: UILabel!
     
+    @IBOutlet var mainView: UIView!
     var mode = "length"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fromUnit.text = "Yards"
         toUnit.text = "Meters"
+        mainView.backgroundColor = BACKGROUND_COLOR
         // Do any additional setup after loading the view.
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -110,13 +112,13 @@ class ViewController: UIViewController, UnitSelection{
        let  str = fromTextField.text
         
         if let input = Double(str!){
-            var conVal = getConversionValue(fromType: fromUnit.text!, toType: toUnit.text!)
+            let conVal = getConversionValue(fromType: fromUnit.text!, toType: toUnit.text!)
             
             toTextField.text = ((String)(conVal*input))
-            toTextField.textColor = UIColor.black
+           
         } else{
             toTextField.text = "You broke it, great."
-            toTextField.textColor = UIColor.red
+          
         }
     }
     
@@ -125,7 +127,8 @@ class ViewController: UIViewController, UnitSelection{
         toTextField.text = ""
     }
     
-    @IBAction func modeChange(_ sender: Any) {
+
+    @IBAction func modeBtn(_ sender: Any) {
         if (mode == "length"){
             mode = "volume"
             fromTextField.placeholder = "Enter Volume"
@@ -136,9 +139,11 @@ class ViewController: UIViewController, UnitSelection{
             fromTextField.placeholder = "Enter Length"
             fromUnit.text = "Yards"
             toUnit.text = "Meters"
+    }
+        guard let ph = fromTextField.placeholder else {
+            return
         }
-        
-    }
+        fromTextField.attributedPlaceholder = NSAttributedString(string: ph, attributes: [NSAttributedString.Key.foregroundColor : FOREGROUND_COLOR])
     }
 
-
+}
